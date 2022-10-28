@@ -5,7 +5,7 @@ const cities = require('./cities');
 const images = require('./images')
 const { places, descriptors } = require('./seedHelpers');
 
-mongoose.connect('DB_URL');
+mongoose.connect('process.env.DB_URL');
 
 
 db.on('error', console.error.bind(console, 'connection eroor:'));
