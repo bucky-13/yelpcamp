@@ -1,0 +1,89 @@
+<% layout('/layouts/boilerplate') %>
+
+    <div class="container d-flex justify-content-center align-items-center mt-2">
+        <div class="row flex-fill">
+            <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+                <div class="card shadow">
+
+                    <div class="img-container pos-relative-container">
+                        <img src="https://usatours.se/sites/default/files/styles/open_graph/public/2019-10/blog-hero-guide-til-yellowstone.jpg?h=d1933b65&itok=Kdys2EiO"
+                            class="card-img-top" id="card-img-background" alt="fancy login image">
+                        <div class="centered-text">
+                            <h1 class="text-center fw-bold">Add new Campground</h1>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form action="/campgrounds" method="POST" novalidate class="validation-required"
+                            enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label class="form-label" for="title">Title</label>
+                                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                                <div class="valid-feedback">Correct format</div>
+                                <div class="invalid-feedback">
+                                    Please enter a name for the Campground.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="location">Location</label>
+                                <input class="form-control" type="text" id="location" name="campground[location]"
+                                    required>
+                                <div class="valid-feedback">Correct format</div>
+                                <div class="invalid-feedback">
+                                    Please enter a location for the Campground.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="price">Price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">€</span>
+                                    <input type="number" class="form-control" id="price" name="campground[price]"
+                                        aria-label="price-label" required>
+                                    <span class="input-group-text">.00</span>
+                                    <div class="valid-feedback">Correct format</div>
+                                    <div class="invalid-feedback">
+                                        Please enter a price for the Campground, must be 1€ or higher.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- <div class="mb-3">
+                    <label class="form-label" for="image">Image Url</label>
+                    <input class="form-control" type="text" id="image" name="campground[image]" required>
+                    <div class="valid-feedback">Correct format</div>
+                    <div class="invalid-feedback">
+                        Please enter an URL for the Campground image.
+                    </div>
+                </div> -->
+
+                            <div class="mb-3">
+                                <label class="form-label" for="description">Description</label>
+                                <textarea class="form-control" type="text" id="description"
+                                    name="campground[description]" required></textarea>
+                                <div class="valid-feedback">Correct format</div>
+                                <div class="invalid-feedback">
+                                    Please enter a desription for the Campground.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="formFileMultiple" class="form-label">Upload Image(s)</label>
+                                <input class="form-control" type="file" name="image" id="formFileMultiple" multiple>
+                            </div>
+
+                            <div class="mb-3"><button class="btn btn-success">Add Campground</button></div>
+
+                        </form>
+                        <div><a href="/campgrounds">Back to campgrounds index</a></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>

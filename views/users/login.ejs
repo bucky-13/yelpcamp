@@ -1,0 +1,49 @@
+<% layout('/layouts/boilerplate') %>
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="row flex-fill">
+            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                <div class="card shadow">
+
+                    <img src="https://www.nar-och-vart.se/site/images/illustration/yellowstone-parc-national_996.jpg"
+                        class="card-img-top" alt="fancy login image">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">Login</h5>
+
+                        <form action="/login" method="POST" class="validation-required" novalidate>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="username">Username</label>
+                                <input class="form-control" type="text" id="username" name="username" required
+                                    autofocus>
+                                <div class="valid-feedback">Correct format</div>
+                                <div class="invalid-feedback">
+                                    Please enter a username.
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <label class="form-label" for="password">Password</label>
+                                <input class="form-control" type="password" id="password" name="password" required>
+                                <div class="valid-feedback">Correct format</div>
+                                <div class="invalid-feedback">
+                                    Please enter a password.
+                                </div>
+                            </div>
+
+                            <div class="mb-3 d-grid gap-2"><button class="btn btn-success btn-block">Login</button>
+                            </div>
+                        </form>
+                        <div class="text-center mb-3">
+                            <h5 class="card-title mb-3">New user?</h5>
+                            <a href="/register"><button type="button"
+                                    class="btn btn-sm btn-outline-success">Register</button></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

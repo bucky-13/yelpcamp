@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://images.bonnier.cloud/files/ill/production/2022/01/06133318/supervulkan-yellowstone.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 0.25rem solid white;
+}
+
+.nav-link.active {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 0.25rem solid white;
+}
+
+#home-button-big,
+#home-button-big:hover {
+    color: #333;
+    /* font-weight: bold; */
+    text-shadow: none;
+}
+
+#home-button-big:hover {
+    color: #449944
+}
+
+#username-navbar {
+    font-weight: 500;
+    color: #696;
+}
+
+#username-navbar:hover {
+    border-bottom: 0.25rem solid #696;
+}
