@@ -5,7 +5,7 @@ const cities = require('./cities');
 const images = require('./images')
 const { places, descriptors } = require('./seedHelpers');
 
-mongoose.connect('mongodb://localhost:27017/yelpcamp');
+mongoose.connect('DB_URL');
 
 
 db.on('error', console.error.bind(console, 'connection eroor:'));
