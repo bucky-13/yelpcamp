@@ -1,30 +1,43 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("https://images.bonnier.cloud/files/ill/production/2022/01/06133318/supervulkan-yellowstone.jpg");
+  background-size: cover;
+  background-position: center;
+  /* box-shadow: inset 0 0 5rem rgba(255, 255, 255, 0.5); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #cluster-map {
-    width: 100%;
-    height: 500px;
+  width: 100%;
+  height: 500px;
 }
 
 #map {
-    aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
 }
 
 #card-img-background {
-    height: 150px;
-    object-fit: cover;
-    opacity: 0.4;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 .centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pos-relative-container {
-    position: relative;
+  position: relative;
 }
 
 .img-index-container {
-    aspect-ratio: 1 / 1;
-
+  aspect-ratio: 1 / 1;
 }
