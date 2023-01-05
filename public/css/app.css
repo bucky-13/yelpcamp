@@ -1,15 +1,33 @@
+:root {
+  --main-color: #4caf50;
+}
+
 body {
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("https://images.bonnier.cloud/files/ill/production/2022/01/06133318/supervulkan-yellowstone.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://res.cloudinary.com/dpxheiyaz/image/upload/v1666696645/Yelpcamp/rrvfk6ips5istwgqbrbv.jpg");
   background-size: cover;
   background-position: center;
   /* box-shadow: inset 0 0 5rem rgba(255, 255, 255, 0.5); */
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.font-jost,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+.yelpcamp-logo {
+  font-weight: 600;
 }
 
 #cluster-map {
@@ -40,4 +58,27 @@ body {
 
 .img-index-container {
   aspect-ratio: 1 / 1;
+}
+
+nav {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+/* .padding-div {
+  padding-top: 7rem;
+} */
+
+main {
+  padding-top: 8rem;
+  /* height: 100vh -80px;
+  margin-top: 80px; */
+}
+
+.main-nav {
+  background-color: black;
 }

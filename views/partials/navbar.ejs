@@ -1,34 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
+<nav
+  class="navbar navbar-expand-lg navbar-dark fixed-top main-nav font-jost px-5 fs-5"
+>
+  <div class="container-fluid">
+    <a class="nav-link yelpcamp-logo text-white pe-5 fs-5" href="/"
+      ><span class="main-color">Yelp</span>Camp</a
+    >
 
-        <a class="navbar-brand" href="/">YelpCamp</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" aria-current="page" href="/">Home</a>
+        <a class="nav-link <%=url ==="/campgrounds" ? 'active' : ''%>" href="/campgrounds"
+          >Campgrounds</a
+        >
+        <a class="nav-link <%=url ==="/campgrounds/new" ? 'active' : ''%>" href="/campgrounds/new">New Campground</a>
+      </div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="/campgrounds">Campgrounds</a>
-                <a class="nav-link" href="/campgrounds/new">New Campground</a>
-            </div>
-
-            <div class="navbar-nav ms-auto">
-                <% if(!currentUser) {%>
-                    <a class="nav-link" href="/login"><button type="button" class="btn btn-success">Login</button></a>
-                    <a class="nav-link" href="/register"><button type="button"
-                            class="btn btn-outline-success">Register</button></a>
-                    <% } else { %>
-                        <a class="nav-link" href="#">
-                            <%= currentUser.username %>
-                        </a>
-                        <a class="nav-link" href="/logout"><button type="button"
-                                class="btn btn-outline-warning">Logout</button></a>
-                        <% } %>
-            </div>
-        </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currentUser) {%>
+        <a class="nav-link" href="/login"
+          ><button type="button" class="btn btn-success">Login</button></a
+        >
+        <a class="nav-link" href="/register"
+          ><button type="button" class="btn btn-outline-success">
+            Register
+          </button></a
+        >
+        <% } else { %>
+        <a class="nav-link" href="#"
+          ><button type="button" class="btn btn-dark">
+            <%= currentUser.username %>
+          </button>
+        </a>
+        <a class="nav-link" href="/logout"
+          ><button type="button" class="btn btn-outline-warning">
+            Logout
+          </button></a
+        >
+        <% } %>
+      </div>
     </div>
+  </div>
 </nav>
+<div class="padding-div"></div>
