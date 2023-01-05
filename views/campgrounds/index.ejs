@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<div class="mb-5">
+<div class="mb-5 text-center">
   <h3>
     <a href="/campgrounds/new"
       ><button type="button" class="btn btn-lg main-bg-color-hover">
@@ -34,7 +34,7 @@
         <a href="/campgrounds/<%= campground._id %>">
           <% if(campground.images.length) {%>
           <img
-            class="img-fluid img-index-container"
+            class="img-fluid img-index-container text-center"
             alt=""
             src="<%=campground.images[0].indexThumbnail %>"
           />
@@ -57,11 +57,12 @@
             ><%= campground.title %></a
           >
         </h4>
-
-        <p class="card-text"><%= campground.description %></p>
         <p class="card-text">
           <small class="text-muted"> <%= campground.location %> </small>
         </p>
+
+        <p class="card-text"><%= campground.description %></p>
+
         <a
           href="/campgrounds/<%= campground._id %>"
           class="btn main-bg-color-hover"

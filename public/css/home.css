@@ -1,5 +1,6 @@
 :root {
   --main-color: #4caf50;
+  --main-color-hover: #3d8b3f;
 }
 
 body {
@@ -43,23 +44,23 @@ h6 {
 
 .nav-link:hover {
   color: rgba(255, 255, 255, 1);
-  border-bottom: 0.25rem solid white;
 }
 
 .nav-link.active {
   color: rgba(255, 255, 255, 1);
-  border-bottom: 0.25rem solid white;
 }
 
-#home-button-big,
-#home-button-big:hover {
-  color: #333;
-  /* font-weight: bold; */
+#home-button-big {
+  background-color: white;
+  color: var(--main-color);
   text-shadow: none;
 }
 
-#home-button-big:hover {
-  color: #449944;
+#home-button-big:hover,
+#home-button-big:first-child:hover,
+:not(.btn-check) + .btn:hover {
+  color: white;
+  background-color: var(--main-color);
 }
 
 #username-navbar {
