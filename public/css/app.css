@@ -1,5 +1,6 @@
 :root {
   --main-color: #4caf50;
+  --main-color-hover: #3d8b3f;
 }
 
 body {
@@ -26,6 +27,27 @@ h6 {
 .main-color {
   color: var(--main-color);
 }
+.main-color-hover {
+  color: var(--main-color);
+}
+.main-color-hover:hover {
+  color: var(--main-color-hover);
+}
+.main-bg-color {
+  background-color: var(--main-color);
+  color: white;
+}
+.main-bg-color-hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.main-bg-color-hover:hover,
+.main-bg-color-hover:first-child:hover,
+:not(.btn-check) + .btn:hover {
+  background-color: var(--main-color-hover);
+  color: white;
+}
+
 .yelpcamp-logo {
   font-weight: 600;
 }
@@ -42,7 +64,9 @@ h6 {
 #card-img-background {
   height: 150px;
   object-fit: cover;
-  opacity: 0.4;
+  /* opacity: 0.4; */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) */
+  filter: brightness(40%);
 }
 
 .centered-text {

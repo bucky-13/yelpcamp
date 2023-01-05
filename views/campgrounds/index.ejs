@@ -1,23 +1,28 @@
 <% layout('/layouts/boilerplate') %>
 
 <div class="container mb-5">
-  <div class="d-flex justify-content-between">
+  <div class="text-center">
     <div class="">
-      <h1 class="text-light">All Campgrounds</h1>
-    </div>
-    <div class="">
-      <h3>
-        <a href="/campgrounds/new"
-          ><button type="button" class="btn btn-lg btn-success">
-            + Campground
-          </button></a
-        >
-      </h3>
+      <h1 class="text-light display-2 fw-bold">All Campgrounds</h1>
     </div>
   </div>
 </div>
 
-<div id="cluster-map" class="mb-5"></div>
+<div class="card mb-5">
+  <div class="card-body">
+    <div id="cluster-map"></div>
+  </div>
+</div>
+
+<div class="mb-5">
+  <h3>
+    <a href="/campgrounds/new"
+      ><button type="button" class="btn btn-lg main-bg-color-hover">
+        + New Campground
+      </button></a
+    >
+  </h3>
+</div>
 
 <% for(let campground of campgrounds) { %>
 
@@ -45,13 +50,21 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"><%= campground.title %></h5>
+        <h4 class="card-title">
+          <a
+            href="/campgrounds/<%= campground._id %>"
+            class="main-color-hover text-decoration-none fw-bold"
+            ><%= campground.title %></a
+          >
+        </h4>
 
         <p class="card-text"><%= campground.description %></p>
         <p class="card-text">
           <small class="text-muted"> <%= campground.location %> </small>
         </p>
-        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary"
+        <a
+          href="/campgrounds/<%= campground._id %>"
+          class="btn main-bg-color-hover"
           >View <%= campground.title %>
         </a>
       </div>
